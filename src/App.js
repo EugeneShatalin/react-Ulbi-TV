@@ -8,13 +8,7 @@ import './styles/App.css';
 function App() {
   return (
     <div className="App">
-      <PostItem/>
-      <PostItem/>
-      <PostItem/>
-      <PostItem/>
-      <PostItem/>
-      <PostItem/>
-      <PostItem/>
+      <PostItem post={{id: 1, title: 'Javascript', body: 'Description'}}/>      
     </div>
   );
 }
