@@ -13,15 +13,19 @@ function App() {
     { id: 3, title: 'CSS', body: 'Description 3' },
   ]);
 
-    const create = (newPost) => {
+    const createPost = (newPost) => {
         setPosts([...posts, newPost]);
+    }
+
+    const removePost = (post) => {
+        setPosts(posts.filter(p => p.id !== post.id));
     }
 
 
   return (
     <div className="App">
-      <PostForm create={create}/>
-      <Postlist posts={posts} title='Посты про Фронтенд' />
+      <PostForm create={createPost} />
+      <Postlist posts={posts} remove={removePost} title='Посты про Фронтенд' />
     </div>
   );
 }
